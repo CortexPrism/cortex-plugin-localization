@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-localization",
-  "version": "1.0.0",
-  "description": "Content Localization Pipeline — LLM translation with Lokalise/Crowdin/Phrase integration and human-in-the-loop review",
+  "version": "1.0.1",
+  "description": "Content Localization Pipeline \u2014 LLM translation with Lokalise/Crowdin/Phrase integration and human-in-the-loop review",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,7 +9,10 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-localization",
   "homepage": "https://cortexprism.io/marketplace/plugins/localization",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "l10n_translate",
@@ -21,10 +24,25 @@
       "description": "Push translations to localization platform",
       "params": []
     },
-    { "name": "l10n_pull", "description": "Pull reviewed translations", "params": [] },
-    { "name": "l10n_status", "description": "Get localization coverage status", "params": [] }
+    {
+      "name": "l10n_pull",
+      "description": "Pull reviewed translations",
+      "params": []
+    },
+    {
+      "name": "l10n_status",
+      "description": "Get localization coverage status",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
